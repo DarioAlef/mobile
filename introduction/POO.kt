@@ -1,3 +1,4 @@
+// classe
 class Carro {
     // construtor primário da classe
     var marca: String? = null
@@ -9,13 +10,23 @@ class Carro {
     }
 }
 
-
-class ContaBancaria(public var nomeCliente: String, private var saldo: Double) {
+// métodos
+open class ContaBancaria(public var nomeCliente: String, private var saldo: Double) {
     fun depositar(valor: Double) { saldo += valor }
 
     fun obterSaldo() = saldo
 }
 
+
+// interfaces
+interface Trabalhavel {
+    fun trabalhar()
+}
+class Desenvolvedor : Trabalhavel {
+    override fun trabalhar() {
+        println("Desenvolvendo código...")
+    }
+}
 
 fun main () {
     val meuCarro = Carro()
